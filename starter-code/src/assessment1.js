@@ -63,7 +63,7 @@ function longestString(strings) {
 // Return whether a word is in an array
 function doesWordExist(wordsArr, word) {
   for (let i = 0; i < wordsArr.length; i++) {
-    if (words.indexOf(wordsArr) === 0) {
+    if (wordsArr.indexOf(word) === 0) {
       return true;
     }
     return false;
