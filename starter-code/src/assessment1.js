@@ -1,37 +1,37 @@
 // Write a function that returns the product of 2 numbers
 function product(x, y) {
-  return x*y;
+  return x * y;
 }
 
 // Write a function that returns whether a given number is even
 
 function isEven(num) {
-  if(num % 2 === 0){
-     return  true;
+  if (num % 2 === 0) {
+    return true;
   }
   return false;
 }
 
 // Return the biggest of 2 numbers
 function maxOfTwoNumbers(a, b) {
-  if (a>b){
+  if (a > b) {
     return a;
-  }else{
+  } else {
     return b;
   }
 }
 
 // Return the biggest of 3 numbers
 function maxOfThreeNumbers(a, b, c) {
-  let maxValue = Math.max(num1, num2, num3);
+  let maxValue = Math.max(a, b, c);
   return maxValue;
 }
 
 // Calculate the sum of an array of numbers
 function sumArray(numbers) {
   let count = 0;
-  for(let i=0;i<numbers.length;i++){
-    count+=numbers[i];
+  for (let i = 0; i < numbers.length; i++) {
+    count += numbers[i];
   }
   return count;
 }
@@ -46,13 +46,13 @@ function maxOfArray(numbers) {
 function longestString(strings) {
   let numberCounter = [];
 
-for(i=0;i<strings.length;i++){
-  numberCounter.push(strings[i].length);
-  let wordLength = Math.max.apply(null, numberCounter);
-  if(wordLength === strings[i].length){
-    result = strings[i];
-   }
-  
+  for (i = 0; i < strings.length; i++) {
+    numberCounter.push(strings[i].length);
+    let wordLength = Math.max.apply(null, numberCounter);
+    if (wordLength === strings[i].length) {
+      result = strings[i];
+    }
+
   }
   return result;
 }
@@ -60,10 +60,10 @@ for(i=0;i<strings.length;i++){
 
 // Return whether a word is in an array
 function doesWordExist(wordsArr, word) {
-  for(let i=0;i<wordsArr.length;i++){
-    if (word===wordsArr[i]){
+  for (let i = 0; i < wordsArr.length; i++) {
+    if (word === wordsArr[i]) {
       return true;
-    } else{
+    } else {
       return false;
     }
   }
@@ -71,20 +71,20 @@ function doesWordExist(wordsArr, word) {
 
 // Finding the first non-duplicate word in an array
 function findUnique(wordsArr) {
-  
 
-  
+
+
 }
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
 function getFullName(personObj) {
 
- 
+  return personObj.firstName + " " + personObj.lastName;
 }
 
 // Return the biggest number in a two dimensional array
 function maxTwoDimArray(matrix) {
   return Math.max.apply(Math, matrix.map(function (i) {
-    return i[0]+i[1]+i[2];
-}));
+    return i[0] + i[1] + i[2];
+  }));
 }
