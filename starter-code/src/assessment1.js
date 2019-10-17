@@ -78,7 +78,7 @@ function findUnique(wordsArr) {
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
 function getFullName(personObj) {
-return return `${personObj.firstName} ${personObj.lastName}`;
+
  
 }
 
