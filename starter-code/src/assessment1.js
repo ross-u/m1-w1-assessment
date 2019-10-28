@@ -47,21 +47,27 @@ function sumArray(numbers) {
 
 // Return the biggest number of a non-empty array
 function maxOfArray(numbers) {
-    let highest = 0;
     if (numbers.length === 0) {
         return `The array is empty`;
     } else {
+        function sum(numbers) {
+            var newArr = 0;
 
-        for (let i = 1; i < numbers.length; i++) {
-            highest = numbers[0];
-            if (numbers[i] > highest) {
-                numbers[i] = highest;
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] > newArr) {
+                    newArr = numbers[i]
+                }
+
+
             }
+
+            return newArr;
         }
 
 
+
     }
-    return highest;
+
 
 }
 
