@@ -66,24 +66,27 @@ function doesWordExist(wordsArr, word) {
 
 // Finding the first non-duplicate word in an array
 function findUnique(wordsArr) {
+  console.log(wordsArr);
   var counterObj = {};
   if(wordsArr.length==0){
     return false;
   }
   else {
     wordsArr.forEach(word=>{
-      if (!counterObj.word){
-        
+      if (!counterObj[word]){
+        counterObj[`${word}`] = {counter: 1};
+        console.log(counterObj);
       }
       else {
-        counterObj.word.counter += 1;
+        counterObj[`${word}`].counter += 1;
       }
     })
     var uniqueWords = [];
     for (word in counterObj) {
-      if(word.counter==1) {
+      if(counterObj[`${word}`].counter==1) {
         uniqueWords.push(word);
       }
+      console.log(uniqueWords);
     }
   }
   return uniqueWords[0];
