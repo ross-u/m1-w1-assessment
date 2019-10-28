@@ -50,22 +50,18 @@ function maxOfArray(numbers) {
     if (numbers.length === 0) {
         return `The array is empty`;
     } else {
-        function sum(numbers) {
-            var newArr = 0;
 
-            for (let i = 0; i < numbers.length; i++) {
-                if (numbers[i] > newArr) {
-                    newArr = numbers[i]
-                }
+        var newArr = 0;
 
-
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > newArr) {
+                newArr = numbers[i]
             }
 
-            return newArr;
+
         }
 
-
-
+        return newArr;
     }
 
 
@@ -73,35 +69,31 @@ function maxOfArray(numbers) {
 
 // Return the longest string in an array
 function longestString(strings) {
-    for (let i = 1; i < strings.length; i++) {
-        var longestWord = longesStr;
-
-        var longestStr = strings[0].length;
-        if (strings[i].length > longestStr) {
-            strings[i] = longestStr;
+    var longestWord = 0;
+    for (let i = 0; i < strings.length; i++) {
+        if (strings[i] > longestWord) {
+            strings[i] = longestWord;
         }
-
-
     }
-
-    return longestWord;
-
+    return strings[i];
 
 }
 
 // Return whether a word is in an array
 function doesWordExist(wordsArr, word) {
-    if (wordsArr.includes(word)) {
-        return `true`;
-    } else { return `false`; }
+    for (let i = 0; i < wordsArr.length; i++) {
+        if (wordsArr[i].includes(word)) {
+            return true;
+        } else { return false; }
+    }
 }
+
 
 // Finding the first non-duplicate word in an array
 function findUnique(wordsArr) {
     for (let i = 0; i < wordsArr.length; i++) {
-        if (wordsArr[i] !== wordsArr[i + 1]) {
-            return wordsArr[i];
-        }
+        if (wordsArr[i] === wordsArr)
+
 
     }
 
@@ -109,11 +101,15 @@ function findUnique(wordsArr) {
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
 function getFullName(personObj) {
-    var fullName = `${personObj.firstName} + " " + ${personObj.lastName}`;
+    var firstName = personObj.firstName;
+    var lastName = personObj.lastName;
+
+    var fullName = personObj.firstName + " " + personObj.lastName;
     return fullName;
 }
 
+
 // Return the biggest number in a two dimensional array
 function maxTwoDimArray(matrix) {
-    //
+
 }
