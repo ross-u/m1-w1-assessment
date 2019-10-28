@@ -3,8 +3,8 @@ function product(x, y) {
   return x * y;
 }
 
-// Write a function that returns whether a given number is even
 
+// Write a function that returns whether a given number is even
 function isEven(num) {
   if(num % 2 === 0) {
     return true;
@@ -12,6 +12,7 @@ function isEven(num) {
     return false;
   }
 }
+
 
 // Return the biggest of 2 numbers
 function maxOfTwoNumbers(a, b) {
@@ -21,6 +22,7 @@ function maxOfTwoNumbers(a, b) {
     return b;
   }
 }
+
 
 // Return the biggest of 3 numbers
 function maxOfThreeNumbers(a, b, c) {
@@ -33,6 +35,7 @@ function maxOfThreeNumbers(a, b, c) {
   }
 }
 
+
 // Calculate the sum of an array of numbers
 function sumArray(numbers) {
   var sum = 0;
@@ -42,6 +45,7 @@ function sumArray(numbers) {
   return sum;
 }
 
+
 // Return the biggest number of a non-empty array
 function maxOfArray(numbers) {
   if(numbers.length > 0) {
@@ -50,11 +54,13 @@ function maxOfArray(numbers) {
   }
 }
 
+
 // Return the longest string in an array
 function longestString(strings) {
   strings.sort(function (a,b) { return b.length - a.length; });
   return strings[0];
 }
+
 
 // Return whether a word is in an array
 function doesWordExist(wordsArr, word) {
@@ -65,25 +71,47 @@ function doesWordExist(wordsArr, word) {
   }
 }
 
-// Finding the first non-duplicate word in an array => WRONG
+
+// Finding the first non-duplicate word in an array
 function findUnique(wordsArr) {
 
-  wordsArr.forEach(function (word) {
-    if(word.length === 0 ){
-      return false;
-    }else {
-      var indexOfFirstUnique = wordsArr.indexOf(word);
-      return wordsArr[indexOfFirstUnique];
-    }
-  });
+  
+  if(wordsArr[0] === undefined) { // return false if the first argument is an empty array  
+    return false;
+  } 
+  else {
+    // loop on the array of words
+    for(var i = 0; i < wordsArr.length; i++) {
+      // create a variable for first unique word initialized as the current word, and a count variable
+      var currentWord = wordsArr[i];
+      var firstUnique = 0; //0: true and 1: false
+     
+      // 
+      for(var j = 0; j < wordsArr.length; j++) {
+        if(j == i) { // if same word, skip
+          continue; 
+        }
+        if((wordsArr[j] == currentWord)) { // if current word finds an occurence, set to false (this is not a unique word)
+          firstUnique = 1; 
+        }
+      } // end of inner for loop
+
+      if(firstUnique === 0) { // if true
+        //console.log(firstUniqueWord);
+        var firstUniqueWord = currentWord;
+        return firstUniqueWord; // return the current word that has unique value
+      }
+    } // end of outer for loop
+   } // end of else
 }
-// console.log(findUnique(stringsArr));
+//console.log(findUnique(stringsArr));
 
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
 function getFullName(personObj) {
   return personObj.firstName + ' ' + personObj.lastName;
 }
+
 
 // Return the biggest number in a two dimensional array
 function maxTwoDimArray(matrix) {
