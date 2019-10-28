@@ -80,19 +80,24 @@ function findUnique(wordsArr) {
   
   // I should count the times the word appears, and the first time the count === 1 break the for loop and return that word with count === 1
   
-  // if (wordsArr.length != 0) {
-  //   var uniqueWord = '';
-  //   for (var i=0;i<wordsArr.length;i++) {
-  //     for (var j=i;j<wordsArr.length-i;i++) {
-  //       if (wordsArr[i] != wordsArr[j]) {
-  //         uniqueWord = wordsArr[i];
-  //       }
-  //     }
-  //   }
-  //   return
-  // } else {
-  //   return false;
-  // }
+  if (wordsArr.length != 0) {
+    var uniqueWord = '';
+    for (var i=0;i<wordsArr.length;i++) {
+      var count = 1;
+      for (var j=i+1;j<wordsArr.length;j++) {
+        if (wordsArr[i] === wordsArr[j]) {
+          count += 1;
+        }
+      }
+      if (count === 1) {
+        uniqueWord = wordsArr[i];
+        break;
+      }
+    }
+    return uniqueWord;
+  } else {
+    return false;
+  }
 }
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
