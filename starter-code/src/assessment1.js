@@ -31,12 +31,6 @@ function maxOfThreeNumbers(a, b, c) {
 
 // Calculate the sum of an array of numbers
 function sumArray(numbers) {
-	let theSum = 0;
-	numbers.forEach(function(number) {
-		theSum += number;
-	});
-	return theSum;
-
 	return numbers.reduce(function(accum, currentValue) {
 		return accum + currentValue;
 	}, 0);
