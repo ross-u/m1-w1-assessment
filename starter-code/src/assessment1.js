@@ -61,20 +61,17 @@ function sumArray(numbers) {
 // }
 
 
-
 // Return the largest number of a non-empty array
 
-var maxLength = 0
-function maxOfArray(numbers) {
+// for(var x = 0; i<len; i++){ //loops the number of miniarrays
+//   var lar = 0; //to store the biggest int of four
+//   lar = ar[0]; //lar = firstnum of miniarray
 
-  for (var i=0; i < numbers.length; i++) {    
-      var length = numbers[i].length;
-      if (length > maxLength) {
-        maxLength = length;      
-      }
-    }    
-    return maxLength;
-}
+
+function maxOfArray(numbers) {
+  return Math.max(...numbers);
+  }
+
 
 // Return the longest string in an array
 
@@ -122,5 +119,6 @@ function getFullName(personObj) {
 
 // Return the largest number in a two dimensional array
 function maxTwoDimArray(matrix) {
+
   //
 }
