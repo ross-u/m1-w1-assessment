@@ -44,22 +44,21 @@ function maxOfThreeNumbers(a, b, c) {
 
 const numsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //OPTION 1 with reduce
-// function sumArray(numbers) {
-//   return numbers.reduce(function (accumulator, currentValue){
-//       const updatedAccumulator = accumulator + currentValue;
-//           return updatedAccumulator;
-//     }, 0);
-// }
+function sumArray(numbers) {
+  return numbers.reduce(function (acc, curr){
+      return acc + curr;
+    }, 0);
+}
 
 //OPTION 2 with loop
-var total = 0;
-function sumArray(numbers) {
-  var total = 0;
-  for(var i = 0; i < numbers.length; i++) {
-      total += numbers[i];
-  }
-  return total;
-}
+// var total = 0;
+// function sumArray(numbers) {
+//   var total = 0;
+//   for(var i = 0; i < numbers.length; i++) {
+//       total += numbers[i];
+//   }
+//   return total;
+// }
 
 
 
@@ -73,9 +72,8 @@ function maxOfArray(numbers) {
       if (length > maxLength) {
         maxLength = length;      
       }
-      return maxLength;
     }    
-    
+    return maxLength;
 }
 
 // Return the longest string in an array
