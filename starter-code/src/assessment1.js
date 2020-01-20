@@ -42,7 +42,6 @@ function maxOfThreeNumbers(a, b, c) {
 
 // Calculate the sum of an array of numbers
 
-const numsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //OPTION 1 with reduce
 function sumArray(numbers) {
   return numbers.reduce(function (acc, curr){
@@ -62,11 +61,6 @@ function sumArray(numbers) {
 
 
 // Return the largest number of a non-empty array
-
-// for(var x = 0; i<len; i++){ //loops the number of miniarrays
-//   var lar = 0; //to store the biggest int of four
-//   lar = ar[0]; //lar = firstnum of miniarray
-
 
 function maxOfArray(numbers) {
   return Math.max(...numbers);
@@ -119,6 +113,7 @@ function getFullName(personObj) {
 
 // Return the largest number in a two dimensional array
 function maxTwoDimArray(matrix) {
+  // returns maximum of an array ????
+  // firstArray => array.reduce((a, b) => Math.max(a, b));
 
-  //
 }
