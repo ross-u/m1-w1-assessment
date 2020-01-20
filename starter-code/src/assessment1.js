@@ -1,3 +1,5 @@
+'use strict'
+
 // Write a function that returns the product of 2 numbers
 function product(x, y) {
   return x * y;
