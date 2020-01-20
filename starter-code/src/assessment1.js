@@ -155,7 +155,6 @@ function maxTwoDimArray(matrix) {
   else{
     let maximum = 0;
     for(let i=0; i<matrix.length; i++){
-      let maximum = matrix[i];
       for (let j = 0; j<matrix[i].length; j++){
           if(maximum<matrix[i][j]){
             maximum = matrix[i][j];
