@@ -70,7 +70,7 @@ function findUnique(wordsArr) {
     return false;
   } else {
     wordsArr.forEach(element => {
-      for (let i = 0; wordsArr.length; i++) {
+      for (let i = 0; i < wordsArr.length; i++) {
         wordCount = 0;
         if (element === wordsArr[i]) {
           wordCount++;
