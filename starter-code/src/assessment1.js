@@ -51,15 +51,13 @@ function sumArray(numbers) {
     return 0;
   }
 
-  for (var i = 0; i < numbers.length; i++) {
-    if (typeof number !== "number") {
-      return false;
-    }
-  }
-
   let totalSum = 0;
   numbers.forEach(function (number) {
-    totalSum += number;
+    if (typeof number != "number") {
+      return false;
+    } else {
+      totalSum += number;
+    }
   });
   return totalSum;
   //
@@ -70,7 +68,7 @@ function maxOfArray(numbers) {
   if (numbers.length === 0 || typeof numbers != "object") {
     return false;
   }
-
+  
   let largestNumber = 0;
   numbers.forEach(function (number) {
     if (number > largestNumber) {
