@@ -58,24 +58,56 @@ function sumArray(numbers) {
   for(var i = 0; i < numbers.length; i++) {
       total += numbers[i];
   }
-
   return total;
 }
 
 
 
 // Return the largest number of a non-empty array
+
+var maxLength = 0
 function maxOfArray(numbers) {
-  //
+
+  for (var i=0; i < numbers.length; i++) {    
+      var length = numbers[i].length;
+      if (length > maxLength) {
+        maxLength = length;      
+      }
+      return maxLength;
+    }    
+    
 }
 
 // Return the longest string in an array
+
+// var maxLength = 0;
+// var longestWord = '';
+var maxLength = 0;
 function longestString(strings) {
-  //
+
+  if (strings.length > 0) {
+  for (var i=0; i< strings.length; i++) {    
+      var length = strings[i].length;
+      if (length > maxLength) {
+        maxLength = length;
+        longestWord = strings[i];
+      }
+    }    
+    return longestWord;    
+  } 
+  else {
+      return null;
+    }
 }
 
 // Return whether a word is in an array
 function doesWordExist(wordsArr, word) {
+  if (wordsArr.includes(word)) {
+    return true;
+  }
+  else {
+    return false;
+  }
   //
 }
 
@@ -86,6 +118,7 @@ function findUnique(wordsArr) {
 
 // Get the fullName from the object { firstName: 'Tony', lastName: 'Stark'}
 function getFullName(personObj) {
+  return `${personObj.firstName} ${personObj.lastName}`;
   //
 }
 
